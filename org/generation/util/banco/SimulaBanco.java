@@ -7,6 +7,8 @@ import org.generation.util.ReciboSaldo;
 import org.generation.util.banco.CuentaCredito;
 import org.generation.util.banco.CuentaDebito;
 import org.generation.util.banco.TarjetaRegalo;
+import org.generation.util.banco.Banco;
+
 
 
 public class SimulaBanco {
@@ -34,6 +36,17 @@ public class SimulaBanco {
 		
 	    ReciboSaldo.Imprimir(cuentas.get(1001));
 	    ReciboSaldo.Imprimir(cuentas.get(1002));
+	    
+	    Banco banco = new Banco();
+
+	 // Agregar cuentas al banco
+	 banco.agregarCuenta(cuentas.get(1001));
+	 banco.agregarCuenta(cuentas.get(1002));
+
+	 // Reporte del banco
+	 System.out.println("Total en cuentas débito: $" + banco.totalDebito());
+	 System.out.println("Total deuda en cuentas crédito: $" + banco.totalCredito());
+
 		
 	    TarjetaRegalo regalo = new TarjetaRegalo(9001, 1000);
 	    ReciboSaldo.Imprimir(regalo);

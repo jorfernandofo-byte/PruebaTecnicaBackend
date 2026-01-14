@@ -1,11 +1,10 @@
 package org.generation.util;
 
-import org.generation.util.Imprimible;
 import java.util.Date;
 
 public class ReciboSaldo {
 
-    public static void Imprimir (Imprimible c){
+    public static void Imprimir(Imprimible c) {
         System.out.println("+=================================================");
         System.out.println("| Cuenta No. " + c.getNumeroCuenta());
         System.out.println("| " + new Date());
